@@ -7,6 +7,12 @@ class Employee(models.Model):
     mobile = models.CharField(max_length=15)
     position = models.ForeignKey('Position', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.fullname
+
 
 class Position(models.Model):
     title = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.title

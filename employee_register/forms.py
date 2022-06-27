@@ -12,3 +12,8 @@ class EmployeeForm(ModelForm):
             'mobile',
             'position',
         )
+
+        labels = {
+            'fullname': 'Full Name',
+            'emp_code': 'EMP. Code'
+        }
