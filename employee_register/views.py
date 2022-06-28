@@ -42,5 +42,7 @@ def employee_form(request, id=0 ):
 
 
 #Functino for deleting an employee
-def employee_delete(request):
-    pass
+def employee_delete(request, id):
+    employee = Employee.objects.get(pk=id)
+    employee.delete()
+    return redirect('employee-list')

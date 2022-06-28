@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.employee_form, name='employee-form'),
     path('<int:id>/', views.employee_form, name='employee-update'),
+    path('delete/<int:id>/', views.employee_delete, name='employee-delete'),
 
     path('list/', views.employee_list, name='employee-list'),
 ]
